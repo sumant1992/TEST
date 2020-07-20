@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>this is experiment</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+
+
+<h2><%= title %></h2>
+
+
+   <form action="/update/"   method="post" id="myForm">
+    <input required placeholder="Enter your name " type="text" name="name" value="<%= record.namePerson%>" id="nameField"><br><br>
+    <input placeholder="Enter your name " type="hidden" name="id" value="<%= record._id%>" ><br><br>
+    <input required placeholder="Enter your contact number" type="number" name="phone" value="<%= record.PhoneNumber %>" id="phoneField"><br><br>
+
+    <button onclick="validate()" class="button button2">Submit</button>
+
+</form>
+
+</body>
+</html>
+
+

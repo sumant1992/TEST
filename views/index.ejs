@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>this is experiment</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <% include C:\Users\saurav\WebstormProjects\ExpressDemo-03\views\index1.ejs %>
+
+
+
+  <button onclick="window.location.href='/test';" class="button button2">
+      Create Contact
+  </button>
+
+
+<h2>Contact Person</h2>
+  <table id="myTable">
+    <tr>
+      <th >Name </th>
+      <th>PhoneNumber </th>
+      <th>ACTION</th>
+    </tr>
+
+   <tr>
+     <%for(var i =0; i<data.length;i++) {%>
+       <td><%= data[i].namePerson%></td>
+       <td><%= data[i].PhoneNumber%></td>
+       <td>
+         <a href="/edit/<%= data[i]._id%>">edit</a>
+         <a href="/delete/<%= data[i]._id%>">delete</a>
+       </td>
+   </tr>
+
+    <%} %>
+  </table>
+  <br>
+
+  <br>
+
+
+
+
+  </body>
+</html>
+<script>
+    console.log("index.ejs javascript support")
+</script>
